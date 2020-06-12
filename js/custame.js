@@ -1,10 +1,17 @@
 /*jslint browser: true*/
-/*global $, window */
+/*global $, window, WOW */
 // eslint-disable-next-line no-console
+$(function () {
+    "use strict";
+    $("body").niceScroll({
+        cursorcolor: "#f76006",
+        horizrailenabled: false // nicescroll can manage horizontal scroll
+    });
+});
 $(function () { // start relowd page
 
     "use strict";
-    
+
     //run menu ul links
     var x = $(window).height();
     $('.nav .menu').click(function () {
@@ -36,4 +43,6 @@ $(function () { // start relowd page
         });
     }());
     // END autoslider testymonial
+    // wow animation
+    new WOW().init();
 }); // close relowd page
